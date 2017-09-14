@@ -87,6 +87,13 @@ public class Videobridge
 
     /**
      * The name of the property which controls whether media recording is
+     * started automatically when conference is created.
+     */
+    public static String ENABLE_MEDIA_AUTO_RECORDING_PNAME
+	= "org.jitsi.videobridge.ENABLE_MEDIA_AUTO_RECORDING";
+    
+    /**
+     * The name of the property which controls whether media recording is
      * enabled.
      */
     public static final String MEDIA_RECORDING_PATH_PNAME

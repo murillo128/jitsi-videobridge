@@ -300,6 +300,14 @@ public class Conference
             videobridgeStatistics.totalConferencesCreated.incrementAndGet();
         }
 
+        ConfigurationService cfg = getVideobridge().getConfigurationService();
+        boolean autoRecordingIsEnabled
+            = cfg.getBoolean(
+                Videobridge.ENABLE_MEDIA_AUTO_RECORDING_PNAME,
+                false);
+
+        setRecording(autoRecordingIsEnabled);
+
         touch();
     }
 
